@@ -1,0 +1,12 @@
+# Changelog
+All changes, small and large, will be added to this changelog for documentation purposes.
+
+## [Unreleased]
+
+## [0.0.1] - 2017-09-15
+### Added
+- This changelog file to document future developments
+- A README.md file, which must be improved on for an explanation of the software and
+  for documentation purposes
+- A License (the GNU GPLv2, specifically. Long Live Free/Libre Software)
+- pynancier.py, the life of the party (ergo, the main script)
