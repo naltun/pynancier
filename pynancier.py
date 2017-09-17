@@ -19,7 +19,7 @@ import requests
 import time
 from subprocess import call
 
-version = '0.0.1'
+version = '0.0.2.1'
 
 # Financier ASCII logo; made with figlet.js (github.com/patorjk/figlet.js)
 logo = """_______ _                        _
