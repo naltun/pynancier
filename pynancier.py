@@ -20,7 +20,7 @@ import sys
 import time
 from subprocess import call
 
-version = '0.2.0-beta.1'
+version = '0.2.0-beta.1.1'
 
 # Pynancier ASCII logo; made with figlet.js (github.com/patorjk/figlet.js)
 logo = """  _____                              _
@@ -41,16 +41,22 @@ def clear_screen():
     call('clear')
 
 # check to see if we are supplied a command-line, numerical argument; if so, work some extra magic
-# (eg. display info on the top argv[1] cryptocurrencies)
-arg = int(sys.argv[1])
+# (ergo, display info on the top argv[1] cryptocurrencies)
+if len(sys.argv) > 1:
+    arg = sys.argv[1]
+    if arg.isdigit():
+        pass
+else:
+    arg = False
+
 if bool(arg):
-    # Currently Pynancier will only support up to 6 cryptocurrencies (ergo, a maximum argument size of 6)
-    if arg <= 6:
+    # Currently Pynancier will only support up to 6 cryptocurrencies, so set a maximum argument size of 6
+    if int(arg) <= 6:
         ticker_limit = arg
     else:
-        ticker_limit = 6
+        ticker_limit = '6'
 
-    ticker_url = 'https://api.coinmarketcap.com/v1/ticker/?limit=' + str(ticker_limit)
+    ticker_url = 'https://api.coinmarketcap.com/v1/ticker/?limit=' + ticker_limit
 
     def get_currency_data():
         currency_data_raw = requests.get(ticker_url)
