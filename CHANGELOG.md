@@ -4,6 +4,10 @@ All changes, small and large, will be added to this changelog for documentation 
 ## [Unreleased]
 - Add an integer argument to the the script so that it will display information of the top `N' performing cryptocurrencies
 
+## [0.2.0-beta.1] - 2017-09-22
+### Added
+- Added an integer command-line argument to display information on the top `N' currencies. Requires some testing.
+
 ## [0.1.1] - 2017-09-21
 ### Changed
 - Changed my changelog document type to Markdown
