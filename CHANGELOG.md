@@ -4,6 +4,10 @@ All changes, small and large, will be added to this changelog for documentation 
 ## [Unreleased]
 - Add an integer argument to the the script so that it will display information of the top `N' performing cryptocurrencies
 
+## [0.2.0-beta.1.2] - 2017-10-09
+### Fixed
+- Removed a bug by performing all checks against the supplied script argument by performing a conditional on one line
+
 ## [0.2.0-beta.1.1] - 2017-09-22
 ### Fixed
 - Fixed a bug that caused the script to crash when supplying an argument

@@ -20,7 +20,7 @@ import sys
 import time
 from subprocess import call
 
-version = '0.2.0-beta.1.1'
+version = '0.2.0-beta.1.2'
 
 # Pynancier ASCII logo; made with figlet.js (github.com/patorjk/figlet.js)
 logo = """  _____                              _
@@ -42,10 +42,8 @@ def clear_screen():
 
 # check to see if we are supplied a command-line, numerical argument; if so, work some extra magic
 # (ergo, display info on the top argv[1] cryptocurrencies)
-if len(sys.argv) > 1:
+if len(sys.argv) > 1 and sys.argv[1].isdigit():
     arg = sys.argv[1]
-    if arg.isdigit():
-        pass
 else:
     arg = False
 
